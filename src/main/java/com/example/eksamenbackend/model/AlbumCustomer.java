@@ -16,6 +16,7 @@ public class AlbumCustomer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "album_customer_id")
     private int albumCustomerId;
 
     @ManyToOne

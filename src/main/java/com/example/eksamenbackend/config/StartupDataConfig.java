@@ -34,24 +34,23 @@ public class StartupDataConfig implements ApplicationRunner {
             createAlbums(store);
         }
 
-        //    createAlbumCustomers();
+            createAlbumCustomers();
 
     }
 
 
-/*
     private void createAlbumCustomers() {
-        List<Customer> allCustomers = customerRepository.findAll();
-        List<Album> allAlbums = albumRepository.findAll();
+
 
         AlbumCustomer newReservation = new AlbumCustomer();
-        newReservation.setAlbum(allAlbums.get(1));
-        newReservation.setCustomer(allCustomers.get(1));
+        newReservation.setAlbum(albumRepository.getReferenceById(1));
+        newReservation.setCustomer(customerRepository.getReferenceById(1));
         newReservation.setReserved(true);
         albumCustomerRepository.save(newReservation);
+
     }
 
- */
+
 
     private void createAlbums(Store store) {
 

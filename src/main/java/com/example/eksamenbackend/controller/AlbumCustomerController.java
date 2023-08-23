@@ -37,7 +37,7 @@ public class AlbumCustomerController {
         return albumCustomerService.updateAlbumCustomer(albumCustomer);
     }
 
-    @DeleteMapping("/albumCustomer/{id}")
+    @DeleteMapping("/albumcustomer/{id}")
     public ResponseEntity<AlbumCustomer> deleteAlbumCustomer(@PathVariable int id) {
         return albumCustomerService.deleteAlbumCustomer(id);
     }
