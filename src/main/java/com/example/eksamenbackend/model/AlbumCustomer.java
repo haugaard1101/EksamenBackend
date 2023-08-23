@@ -18,8 +18,6 @@ public class AlbumCustomer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int albumCustomerId;
 
-    private boolean isReserved;
-
     @ManyToOne
     @JoinColumn(name = "album_id", referencedColumnName = "album_id")
     // Her kalder vi vores foreign key column "album_id", og værdierne den lægger ind sætter vi til at være dem der findes
@@ -30,4 +28,5 @@ public class AlbumCustomer {
     @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
     private Customer customer;
 
+    private boolean isReserved;
 }
