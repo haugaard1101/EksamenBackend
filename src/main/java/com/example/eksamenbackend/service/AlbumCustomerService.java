@@ -21,7 +21,9 @@ public class AlbumCustomerService {
         return albumCustomerRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Could not find any albumCustomer with id: " + id));
     }
 
-    public List<AlbumCustomer> getAllAlbumCustomers() { return albumCustomerRepository.findAll();}
+    public List<AlbumCustomer> getAllAlbumCustomers() {
+        return albumCustomerRepository.findAll();
+    }
 
     public ResponseEntity<AlbumCustomer> addAlbumCustomer(AlbumCustomer albumCustomer) {
         boolean exists = albumCustomerRepository.existsById(albumCustomer.getAlbumCustomerId());

@@ -34,7 +34,7 @@ public class StartupDataConfig implements ApplicationRunner {
             createAlbums(store);
         }
 
-            createAlbumCustomers();
+        createAlbumCustomers();
 
     }
 
@@ -49,7 +49,6 @@ public class StartupDataConfig implements ApplicationRunner {
         albumCustomerRepository.save(newReservation);
 
     }
-
 
 
     private void createAlbums(Store store) {

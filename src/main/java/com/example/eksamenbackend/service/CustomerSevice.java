@@ -21,7 +21,9 @@ public class CustomerSevice {
         return customerRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Could not find any Customer with id: " + id));
     }
 
-    public List<Customer> getAllCustomers() { return customerRepository.findAll();}
+    public List<Customer> getAllCustomers() {
+        return customerRepository.findAll();
+    }
 
     public ResponseEntity<Customer> addCustomer(Customer customer) {
         boolean exists = customerRepository.existsById(customer.getCustomerId());

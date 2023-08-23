@@ -22,7 +22,9 @@ public class AlbumService {
         return albumRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Could not find any album with id: " + id));
     }
 
-    public List<Album> getAllAlbums() { return albumRepository.findAll();}
+    public List<Album> getAllAlbums() {
+        return albumRepository.findAll();
+    }
 
     public ResponseEntity<Album> addAlbum(Album album) {
         boolean exists = albumRepository.existsById(album.getAlbumId());
