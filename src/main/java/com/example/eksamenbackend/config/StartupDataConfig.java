@@ -156,7 +156,7 @@ public class StartupDataConfig implements ApplicationRunner {
         album1.setTitle("Legend");
         album1.setArtist("Bob Marley and the Wailers");
         album1.setGenre("Reggea");
-        album1.setAvailability(true);
+        album1.setAvailability("Available");
         album1.setStore(store);
         albumRepository.save(album1);
         createdAlbums.add(album1);
@@ -165,7 +165,7 @@ public class StartupDataConfig implements ApplicationRunner {
         album2.setTitle("Nevermind");
         album2.setArtist("Nirvana");
         album2.setGenre("Rock");
-        album2.setAvailability(false);
+        album2.setAvailability("Not Available");
         album2.setStore(store);
         albumRepository.save(album2);
         createdAlbums.add(album2);

@@ -28,7 +28,7 @@ public class Album {
 
     private String genre;
 
-    private boolean availability;
+    private String availability;
 
     @ManyToOne
     @JoinColumn(name = "store_id", referencedColumnName = "store_id")
